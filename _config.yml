@@ -1,0 +1,11 @@
+title: Openly
+description: Legal policies for Openly, an iOS app for intentional conversations.
+url: https://itsmhamed.github.io
+baseurl: ""
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - firebase-schema-and-rules.md
+  - firebase-setup-checklist.md
+  - openly-mvp-implementation-plan.md
