@@ -9,13 +9,11 @@
   </head>
   <body>
     <header class="site-header">
-      <nav class="nav" aria-label="Primary">
-        <a class="brand" href="{{ '/' | relative_url }}">Openly</a>
-        <div class="nav-links">
-          <a href="{{ '/legal/terms-of-service/' | relative_url }}">Terms</a>
-          <a href="{{ '/legal/community-guidelines/' | relative_url }}">Guidelines</a>
-          <a href="{{ '/legal/privacy-policy/' | relative_url }}">Privacy</a>
-        </div>
+      {% assign current_path = page.url | default: '' %}
+      <nav class="nav" aria-label="Legal policies">
+        <a class="{% if current_path contains '/terms-of-service/' %}is-active{% endif %}" href="{{ '/legal/terms-of-service/' | relative_url }}">Terms</a>
+        <a class="{% if current_path contains '/community-guidelines/' %}is-active{% endif %}" href="{{ '/legal/community-guidelines/' | relative_url }}">Guidelines</a>
+        <a class="{% if current_path contains '/privacy-policy/' %}is-active{% endif %}" href="{{ '/legal/privacy-policy/' | relative_url }}">Privacy</a>
       </nav>
     </header>
 
@@ -26,7 +24,7 @@
     </main>
 
     <footer class="site-footer">
-      <p>Openly legal policies. Last updated pages should be reviewed before public launch.</p>
+      <p>Last updated: April 25, 2026</p>
     </footer>
   </body>
 </html>

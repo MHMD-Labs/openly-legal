@@ -31,48 +31,49 @@ a {
 }
 
 .site-header {
-  border-bottom: 1px solid rgba(236, 217, 210, 0.72);
-  background: rgba(255, 250, 246, 0.86);
+  background: rgba(255, 250, 246, 0.78);
   backdrop-filter: blur(18px);
   position: sticky;
   top: 0;
   z-index: 1;
+  padding: 12px 0;
 }
 
 .nav {
-  width: min(1040px, calc(100% - 32px));
-  min-height: 68px;
+  width: min(520px, calc(100% - 32px));
+  min-height: 0;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 18px;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px;
+  border: 1px solid rgba(236, 217, 210, 0.86);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 14px 44px rgba(107, 75, 65, 0.10);
 }
 
-.brand {
-  color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.55rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 8px 16px;
-  font-size: 0.92rem;
-  font-weight: 650;
-}
-
-.nav-links a {
+.nav a {
   color: var(--muted);
+  border-radius: 999px;
+  padding: 9px 18px;
   text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 750;
+  line-height: 1;
+  transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
 }
 
-.nav-links a:hover {
+.nav a:hover {
   color: var(--rose);
+  background: rgba(214, 77, 104, 0.08);
+}
+
+.nav a.is-active {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--rose), #b9498a);
+  box-shadow: 0 10px 24px rgba(214, 77, 104, 0.22);
 }
 
 .page {
@@ -207,13 +208,14 @@ th {
 
 @media (max-width: 640px) {
   .nav {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 16px 0;
+    width: min(420px, calc(100% - 24px));
+    gap: 4px;
   }
 
-  .nav-links {
-    justify-content: flex-start;
+  .nav a {
+    flex: 1;
+    padding: 9px 8px;
+    text-align: center;
   }
 
   .page {

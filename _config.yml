@@ -1,7 +1,7 @@
 title: Openly
 description: Legal policies for Openly, an iOS app for intentional conversations.
-url: https://itsmhamed.github.io
-baseurl: ""
+url: https://mhmd-labs.github.io
+baseurl: /openly-legal
 markdown: kramdown
 permalink: pretty
 
